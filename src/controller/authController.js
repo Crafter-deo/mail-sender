@@ -19,7 +19,7 @@ exports.postRegister = async (req, res) => {
     });
 
     let mailOptions = {
-      from: "adesolaadeoluwa@gmail.com",
+      from: process.env.MAIL_USERNAME,
       to: req.body.email,
       subject: "Registration Successful",
     };
